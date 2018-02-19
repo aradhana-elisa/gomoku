@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Project 1 : Gomoku | Play Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Setup.js"></script>
+    <script type="text/javascript" src="js/ai.js"></script>
+    <script type="text/javascript" src="js/Human.js"></script>
+    <script type="text/javascript" src="js/Play.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="index.html">Gomoku</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="howtoplay.html">How to Play</a></li>
+				<li><a href="aboutme.html">Author</a></li>
+				<li><a href="play.html">Play</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2 sidebar">
+				<form name="griddim">
+					<p>Select the mode:</p>
+					<div class="form-group">
+						 <div class="radio">
+							<label><input type="radio" name="mode" value="single" id="modeofplay"> Single</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="mode" value="multi" id="modeofplay"> Multi</label>
+						</div>
+					</div>
+					<p>Grid size:</p>
+					<div class="form-group">
+						 <div class="radio">
+							<label><input type="radio" name="gridsize" value="15"> 15 X 15</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="gridsize" value="19"> 19 X 19</label>
+						</div>
+					</div>
+					<p>Grid Color:</p>
+					<div class="form-group">
+						<div class="radio">
+							<label><input type="radio" name="gridcolor" value="E74C3C"> Red</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="gridcolor" value="2E86C1"> Blue</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="gridcolor" value="2ECC71"> Green</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="gridcolor" value="F1C40F"> Yellow</label>
+						</div>				
+					</div>
+					<p>Color of the piece 1:</p>
+					<div class="form-group">
+						<div class="radio">
+							<label><input type="radio" name="piece1" value="000000" selected="selected"> Black</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="piece1" value="E74C3C"> Red</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="piece1" value="2E86C1"> Blue</label>
+						</div>
+					</div>
+					<p>Color of the piece 2: </p>
+					<div class="form-group">
+						<div class="radio">
+							<label><input type="radio" name="piece2" value="ffffff" selected="selected"> White</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="piece2" value="2ECC71"> Green</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="piece2" value="F1C40F"> Yellow</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-default" onclick="Init(); return false;">Submit</button>
+				</form>	
+			</div>
+			<div class="col-sm-8 main">
+				<table id="tbl"></table>
+				<div id="game"></div>
+			</div>
+			<div class="col-sm-2">
+				<div id="timer"></div>
+				<div id="currturns"> </div>
+				<div id="numberplayer1"></div>
+				<div id="numberplayer2"></div>
+				<div id="totalpieces"></div>
+				<div id="player1"></div>
+				<div id="player2"></div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>&copy; 2017</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
